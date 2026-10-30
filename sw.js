@@ -1,10 +1,37 @@
 /* Service worker : met l'application en cache pour un usage hors connexion.
-   Changez VERSION quand vous remplacez un fichier, pour forcer la mise à jour. */
+   VERSION est remplacée automatiquement à chaque publication (deploy-pages.yml).
+   Tout fichier ajouté dans css/ ou js/ doit figurer dans FICHIERS (vérifié en CI). */
 const VERSION = "caisse-v1";
 const FICHIERS = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
+  "./css/styles.css",
+  "./js/actions.js",
+  "./js/calculs.js",
+  "./js/config.js",
+  "./js/depot.js",
+  "./js/export-csv.js",
+  "./js/format.js",
+  "./js/id.js",
+  "./js/main.js",
+  "./js/migration.js",
+  "./js/panneaux/fond.js",
+  "./js/panneaux/mouvement.js",
+  "./js/panneaux/transfert.js",
+  "./js/routeur.js",
+  "./js/stockage.js",
+  "./js/ui/compteur.js",
+  "./js/ui/dialogues.js",
+  "./js/ui/fichiers.js",
+  "./js/ui/panneau.js",
+  "./js/ui/toast.js",
+  "./js/vues/caisse.js",
+  "./js/vues/composants.js",
+  "./js/vues/comptage.js",
+  "./js/vues/donnees.js",
+  "./js/vues/evenement.js",
+  "./js/vues/evenements.js",
   "./icon-192.png",
   "./icon-512.png",
   "./icon-maskable-512.png",

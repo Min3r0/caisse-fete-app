@@ -1,0 +1,9 @@
+{
+  "name": "caisse-fete-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "verifier": "node .github/scripts/verifier.mjs"
+  }
+}
