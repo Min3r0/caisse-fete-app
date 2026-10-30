@@ -2,7 +2,7 @@
 
 Application installable (PWA) qui fonctionne sans connexion : fonds de caisse et mouvements d'argent pendant la fête.
 
-**Appli en ligne :** https://VOTRE-PSEUDO.github.io/caisse-fete-app/
+**Appli en ligne :** https://Min3r0.github.io/caisse-fete-app/
 
 ## Installer sur le téléphone
 1. Ouvrir l'adresse ci-dessus dans Chrome (Android) ou Safari (iPhone).
