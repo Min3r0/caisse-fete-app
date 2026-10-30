@@ -1,0 +1,13 @@
+# Clés de signature et paquets Android (NE JAMAIS les publier)
+*.keystore
+*.jks
+*.apk
+*.aab
+signing-key-info.txt
+pwabuilder-*/
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

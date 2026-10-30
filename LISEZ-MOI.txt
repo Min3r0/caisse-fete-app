@@ -1,0 +1,35 @@
+CAISSE — COMITÉ DES FÊTES
+Application installable, fonctionne sans connexion.
+
+CONTENU DU DOSSIER
+  index.html               l'application
+  manifest.webmanifest     nom, icône, couleurs
+  sw.js                    permet le fonctionnement hors connexion
+  icon-*.png, favicon.png  les icônes
+
+INSTALLATION — 5 MINUTES, UNE SEULE FOIS
+
+1. Sur un ordinateur, allez sur  https://app.netlify.com/drop
+2. Glissez le DOSSIER ENTIER (pas les fichiers un par un) dans la page.
+3. Netlify affiche une adresse du type  https://xxxx-yyyy.netlify.app
+   Notez-la. Vous pouvez la renommer dans les réglages du site.
+4. Sur le téléphone, ouvrez cette adresse dans Chrome.
+5. Menu ⋮ → « Installer l'application ».
+   L'icône apparaît dans le tiroir d'applications, comme n'importe quelle appli.
+
+Après cette installation, le réseau n'est plus nécessaire : tout est stocké
+dans le téléphone.
+
+METTRE À JOUR L'APPLICATION
+Remplacez les fichiers sur Netlify, et changez VERSION dans sw.js
+(par exemple "caisse-v2"). Sinon le téléphone garde l'ancienne version en cache.
+
+SAUVEGARDE
+Bouton « Sauvegarde et export » → « Sauvegarder les données ».
+Faites-le chaque soir de fête et envoyez-vous le fichier par mail.
+Si vous effacez les données de navigation de Chrome, les saisies sont perdues.
+
+VRAI FICHIER APK (facultatif)
+Une fois le site en ligne, https://www.pwabuilder.com transforme cette adresse
+en fichier .apk installable directement. Ce n'est pas nécessaire : la version
+installée via Chrome se comporte déjà comme une application classique.
