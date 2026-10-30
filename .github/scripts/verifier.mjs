@@ -1,5 +1,5 @@
 // Vérifications lancées à chaque Pull Request (check « verifications »).
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 
 let erreurs = 0;
 const ko = (m) => { console.error("✗ " + m); erreurs++; };
@@ -28,6 +28,14 @@ else {
     if (!existsSync(f.replace(/^\.\//, ""))) ko(`sw.js : fichier en cache introuvable ${f}`);
   }
   ok("fichiers du cache présents");
+
+  // 2 bis. Tout fichier de css/ et js/ est bien mis en cache (sinon l'appli casse hors connexion)
+  const enCache = new Set(bloc[1].match(/"([^"]+)"/g).map((s) => s.slice(1, -1).replace(/^\.\//, "")));
+  const sources = ["css", "js"].flatMap((d) => readdirSync(d, { recursive: true }).map((f) => `${d}/${f}`.replace(/\\/g, "/")));
+  for (const f of sources.filter((f) => /\.(js|css)$/.test(f))) {
+    if (!enCache.has(f)) ko(`sw.js : ${f} absent de FICHIERS`);
+  }
+  ok("css/ et js/ entièrement mis en cache");
 }
 
 // 3. index.html : pas de lien absolu vers la racine (casse GitHub Pages)

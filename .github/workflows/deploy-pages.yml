@@ -26,7 +26,7 @@ jobs:
       - name: Préparer le site (sans les fichiers du dépôt)
         run: |
           mkdir _site
-          cp index.html manifest.webmanifest sw.js *.png _site/
+          cp -r index.html manifest.webmanifest sw.js *.png css js _site/
           # Nouvelle VERSION du cache à chaque publication :
           # les téléphones récupèrent automatiquement la mise à jour.
           sed -i "s/const VERSION = \"[^\"]*\";/const VERSION = \"caisse-${GITHUB_SHA::7}\";/" _site/sw.js
